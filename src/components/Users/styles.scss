@@ -1,0 +1,14 @@
+.search{
+    display: flex;
+    margin: 10px 2px 20px 2px;
+    max-width: 500px;
+
+    input {
+        width: 400px !important;
+    }
+}
+
+.filter-button {
+    top: -5px;
+    left: 10px;
+}
