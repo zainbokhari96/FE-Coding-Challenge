@@ -1,30 +1,32 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Listing component is a reusable component designed to display tabular data with pagination functionality. It's commonly used to render lists of items, such as user profiles, products, or any other dataset that requires pagination.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To use the Listing component in your project, follow these steps:
 
-## Expanding the ESLint configuration
+1. Install dependencies:
+   ```bash
+   npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Start the project by using this command:
+   ```bash
+   npm run dev
 
-- Configure the top-level `parserOptions` property like this:
+## Features
+- Pagination: The listing component supports pagination, allowing users to navigate through multiple pages of data.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Filters: Filters are available based on gender. These filters persist even when navigating away from the page.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Search Functionality: The listing page includes a search feature to search for specific items in the list. The approach taken for implementing the search functionality is as follows:
+
+When the user enters a search query, the component filters the list of items based on the name.
+This filtering is performed on the server-side, ensuring a seamless user experience.
+
+- Navigation to Public Profiles: From the listing, users can navigate to individual public profiles. Clicking on a profile item redirects the user to the corresponding profile page.
+
+## Dependencies
+- @mui/material: Material-UI library for building user interfaces in React applications.
+- react-router-dom: React Router library for managing navigation and routing in React applications.
+
